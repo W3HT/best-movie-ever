@@ -1,0 +1,18 @@
+```
+Build a one-page web app promoting a movie -- any one you want. This page:
+
+- Should grab the movie data from an API and populate it on the page.
+- Should use semantically correct HTML 
+- Should incorporate Bootstrap along with custom CSS you write 
+- Should use either jQuery (recommended) or at least some custom Javascript
+- Should have a mock sign up area where the user can enter their email address. When the submit button is pressed, an alert appears saying "Thanks for signing up. We have your email address stored as <email address>"
+- Should use LocalStorage to save that email address, so if the page is reloaded, the form auto-populates that email address in the form. Bonus points if you also disable the submit button when the address is auto-populated.
+
+- All code must clean and well-organized, with good file structure 
+
+- As you work on the project, do regular commits to your repo
+
+- Deploy final work on Github Pages.
+
+- Submit a link to the repo and to the deployed page.
+```
