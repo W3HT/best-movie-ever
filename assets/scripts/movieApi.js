@@ -1,23 +1,24 @@
 var actorsList = $("#movie-actors")
 var directorsList = $("#movie-directors")
 var moviePoster = $("#movie-poster")
-var movieTitle = $("movie-title")
-var moviePlot = $("movie-plot")
-var movieReleaseDate = $("release-date")
+var movieTitle = $("#movie-title")
+var moviePlot = $("#movie-plot")
+var movieReleaseDate = $("#release-date")
 
 
 const apiUrl = "http://www.omdbapi.com/?t="
-const moveTitle = "The+Matrix"
+const inputTitle = "The+Matrix"
 const apiKey = "&apikey=859c383f"
 
 
 
 function fetchMovieInfo() {
-    fetch(apitUrl + movieTitle + apikey)
+    fetch(apiUrl + inputTitle + apiKey)
     .then(function (res) {
         if(res.ok){
             res.json().then(function(data){
-                renderMovieReview(data)
+                // renderMovieReview(data)
+                renderPoster(data)
             })
         }
     })
@@ -25,19 +26,20 @@ function fetchMovieInfo() {
 fetchMovieInfo()
 
 function renderPoster(data){
+    console.log(data)
     moviePoster.attr("src", data.Poster)
     movieTitle.text(data.Title)
-    moviePlot.text(data.Plot)
-    movieReleaseDate.text(data.Released)
-    var directorsArray = data.Director;
+//     moviePlot.text(data.Plot)
+//     movieReleaseDate.text(data.Released)
+    var directorsArray = data.Director.split(", ")
     for(var i=0; i<directorsArray.length; i++){
-        var listDirector = $("<li>").text(directorsArray[i].Director)
+        var listDirector = $("<li>").text(directorsArray[i])
         directorsList.append(listDirector)
     }
-    var actorssArray = data.Actors;
+    var actorsArray = data.Actors.split(", ");
     for(var i=0; i<actorsArray.length; i++){
-        var listActors = $("<li>").text(actorsArray[i].Actors)
-        actorsList.append(listActor)
+        var listActors = $("<li>").text(actorsArray[i])
+        actorsList.append(listActors)
     }
     
 }
