@@ -4,7 +4,7 @@ function storeEmail(e) {
     e.preventDefault()
     inputEmail = document.getElementById("email");
 localStorage.setItem("email", inputEmail.value); 
-alert("Thanks for signing up. We have your email address stored as"+ inputEmail.value + "!")
+alert("Thanks for signing up. We have your email address stored as "+ inputEmail.value + "!")
 $("[data-dismiss=modal]").trigger({ type: "click" });
 }
 
