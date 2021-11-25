@@ -1,8 +1,3 @@
-// const email = document.querySelector("#email");
-// const password =document.querySelector("#password");
-
-// var storedValue = localStorage.getItem("email");
-//     console.log(storedValue)
 const movieSignup = document.getElementById("movie-signup")
 
 function storeEmail(e) {

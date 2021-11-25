@@ -5,33 +5,30 @@ body {
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    text-shadow: 4px 4px 8px black !important;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+
 
 }
-
-#shadow-text {
-  text-shadow: 4px 4px 8px black !important;
-}
-
-
-
 
 header {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     padding: 0px;
     margin: 0px;
     height: 200px;
-    width: auto;
+    width: 100%;
     text-align: center;
     background-color: black;
     background-size: auto;
-    position:relative;
+    position: relative ;
     font-size: 4vh;
     text-shadow: 2px 2px 8px red
 
 }
 
+.shadow-text {
+  text-shadow: 4px 4px 8px black !important
+}
 
 .flex-container {
   display: flex;
@@ -40,33 +37,4 @@ header {
   width: 100%;
 }
 
-h1 {
-  font-size: 4vh;
-}
 
-@media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
-    .thebox1 {
-      float: none;
-      order: 1;
-      width: 100%;
-    }
-    .products {
-      width: 100%;
-    }
-    .container {
-      flex-direction: column;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .products {
-      flex-basis: 50%;
-    }
-    .products:first-child {
-      flex-basis: 100%;
-    }
-  }
