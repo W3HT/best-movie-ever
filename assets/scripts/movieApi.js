@@ -7,7 +7,7 @@ var movieReleaseDate = $("#release-date")
 var movieAwards = $("#movie-awards")
 
 
-const apiUrl = "http://www.omdbapi.com/?t="
+const apiUrl = "https://www.omdbapi.com/?t="
 const inputTitle = "The+Matrix"
 const apiKey = "&apikey=859c383f"
 
