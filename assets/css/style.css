@@ -22,7 +22,7 @@ header {
     padding: 0px;
     margin: 0px;
     height: 200px;
-    width: 100%;
+    width: auto;
     text-align: center;
     background-color: black;
     background-size: auto;
@@ -44,7 +44,7 @@ h1 {
   font-size: 4vh;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     main,
     nav {
       flex-direction: column;
@@ -69,4 +69,4 @@ h1 {
     .products:first-child {
       flex-basis: 100%;
     }
-  } */
+  }

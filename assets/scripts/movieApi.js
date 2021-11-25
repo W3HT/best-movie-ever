@@ -18,7 +18,6 @@ function fetchMovieInfo() {
     .then(function (res) {
         if(res.ok){
             res.json().then(function(data){
-                // renderMovieReview(data)
                 renderPoster(data)
             })
         }
@@ -32,7 +31,6 @@ function renderPoster(data){
     movieTitle.text(data.Title)
     moviePlot.text(data.Plot)
     movieAwards.text(data.Awards)
-    // movieReleaseDate.text(data.Released)
     var directorsArray = data.Director.split(", ")
     for(var i=0; i<directorsArray.length; i++){
         var listDirector = $("<li>").text(directorsArray[i])
