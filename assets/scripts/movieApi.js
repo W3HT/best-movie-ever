@@ -4,6 +4,7 @@ var moviePoster = $("#movie-poster")
 var movieTitle = $("#movie-title")
 var moviePlot = $("#movie-plot")
 var movieReleaseDate = $("#release-date")
+var movieAwards = $("#movie-awards")
 
 
 const apiUrl = "http://www.omdbapi.com/?t="
@@ -29,8 +30,9 @@ function renderPoster(data){
     console.log(data)
     moviePoster.attr("src", data.Poster)
     movieTitle.text(data.Title)
-//     moviePlot.text(data.Plot)
-//     movieReleaseDate.text(data.Released)
+    moviePlot.text(data.Plot)
+    movieAwards.text(data.Awards)
+    // movieReleaseDate.text(data.Released)
     var directorsArray = data.Director.split(", ")
     for(var i=0; i<directorsArray.length; i++){
         var listDirector = $("<li>").text(directorsArray[i])
@@ -41,5 +43,6 @@ function renderPoster(data){
         var listActors = $("<li>").text(actorsArray[i])
         actorsList.append(listActors)
     }
+    
     
 }

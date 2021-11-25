@@ -1,21 +1,50 @@
 body {
-    
-    background-image: url("../images/cinema.jpg")
+    background: url("../images/cinema.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    text-shadow: 4px 4px 8px black !important;
+    margin: 0;
+
 }
+
+#shadow-text {
+  text-shadow: 4px 4px 8px black !important;
+}
+
+
+
 
 header {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    padding: 40px;
-    height: 225px;
+    padding: 0px;
+    margin: 0px;
+    height: 200px;
     width: 100%;
     text-align: center;
-    background-image: url("../images/aisle.jpg");
-    background-size: cover;
-    position: relative;
+    background-color: black;
+    background-size: auto;
+    position:relative;
+    font-size: 4vh;
+    text-shadow: 2px 2px 8px red
 
 }
 
-@media screen and (max-width: 768px) {
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4vh;
+}
+
+/* @media screen and (max-width: 768px) {
     main,
     nav {
       flex-direction: column;
@@ -40,4 +69,4 @@ header {
     .products:first-child {
       flex-basis: 100%;
     }
-  }
+  } */
